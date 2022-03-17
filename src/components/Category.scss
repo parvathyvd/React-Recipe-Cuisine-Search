@@ -1,0 +1,40 @@
+.app__category{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin: 3rem 0;
+    transition: all 0.4s ease;
+    backface-visibility: hidden;
+}
+.app__category-item{
+    background: black;
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    transition: all 0.4s ease;
+    transform: scale(0.8);
+    h4{
+        font-size: .9rem;
+        color: var(--color-white);
+    } 
+}
+
+.app__category-item:hover{
+    color: var(--color-black);
+    transform: scale(1);
+}
+
+.category-icon{
+    display: block;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    text-align: center;
+}

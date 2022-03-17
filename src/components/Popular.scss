@@ -1,0 +1,64 @@
+.app__popular-card-container{
+    margin: 3rem auto;
+    background: transparent;
+}
+
+.app__popular-card-container{
+    .card{
+        height: 25rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4));
+        z-index: 6;     
+        border-radius: 30px;   
+    }
+  
+    .card__image img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        border: 1px solid transparent;
+        transition: all 0.4s ease;
+        border-radius: 30px;
+
+    }
+    .card__image img:hover{
+        border: 1px solid var(--color-secondary);
+        box-shadow: 0 1rem 2rem black;
+    }
+    h4{
+        font-size: 1.4rem;
+        padding: 1rem;
+        color: var(--color-white);
+        line-height: 2.5rem;
+        font-weight: 300;
+        text-align: center;
+        margin: 1rem 0;    
+        display: block;
+        position: relative;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+        transform: translateY(15rem);
+    }
+    h3{
+        font-size: 3rem;  
+        color: var(--color-secondary);
+
+    }
+
+}

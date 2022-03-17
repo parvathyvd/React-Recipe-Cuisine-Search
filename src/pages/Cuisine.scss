@@ -1,0 +1,42 @@
+.app__cuisine{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+.app__cuisine-wrapper{
+    height: 25rem;
+}
+.app__cuisine-card{
+    height: 100%;
+    width: 100%;
+    border-radius: 3rem;
+    position: relative;
+    h4{
+        color: var(--color-white);
+        font-size: 1.3rem;
+        position: absolute;
+        left: 50%;
+        bottom: 1%;
+        transform: translateX(-50%);
+        background: linear-gradient(rgba(0, 0, 0, 0.918),rgba(0,0,0,0.3));
+        padding: 2rem; 
+        width: 90%;
+        text-align: center;
+        font-weight: 300;
+        border-radius: 1rem;
+    }
+}
+
+.app__cuisine-card img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;  
+    border-radius: 3rem;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+}
+.app__cuisine-card img:hover{
+    border-color: var(--color-primary);
+}
