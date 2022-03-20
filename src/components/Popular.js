@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./Popular.scss";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/splide.min.css";
+import { Link } from "react-router-dom";
 
 const Popular = () => {
   const [recipe, setRecipe] = useState([]);
@@ -36,7 +37,12 @@ const Popular = () => {
             arrows: false,
             pagination: false,
             drag: 'free',
-            width: '500'
+            width: '500',
+            breakpoints: {
+              640: {
+                perPage: 2,
+              }
+            }
           }}
         >
           {recipe.length > 0
@@ -44,12 +50,14 @@ const Popular = () => {
                 return (
                   <SplideSlide key={rec.id}>
                     <article className="card">
+                      <Link to={`recipe/${rec.id}`}>
                     <h4>{rec.title}</h4>
                       <div className="card__image">
                           {!rec.image ? <img className="dummy" src='https://dummyimage.com/300' alt="dummy image"/> : <img src={rec.image} alt="recipe" />}
                           <div className="gradient">
                           </div>
                       </div>
+                      </Link>
                     </article>
                   </SplideSlide>
                 );

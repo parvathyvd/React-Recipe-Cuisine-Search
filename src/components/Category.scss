@@ -17,17 +17,29 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
-    transition: all 0.4s ease;
-    transform: scale(0.8);
+    transition: all 0.4s ease;  
+    &:hover{
+        color: var(--color-black);
+        transform: scale(1.2);
+    } 
     h4{
         font-size: .9rem;
         color: var(--color-white);
-    } 
+    }  
 }
 
-.app__category-item:hover{
-    color: var(--color-black);
-    transform: scale(1);
+
+.app__category-item .active{ 
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #f27121, #e94057);
+    color: red;
+    border: none;
 }
 
 .category-icon{

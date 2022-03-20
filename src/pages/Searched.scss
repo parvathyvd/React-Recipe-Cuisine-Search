@@ -1,0 +1,32 @@
+.app__searched{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 3rem;
+}
+.app__searched-card{
+    min-height: 20rem;
+}
+
+.app__searched-card__image{
+    width: 100%;
+    height: 90%;
+    font-size: 1.2rem;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+
+}
+
+.app__searched-card__image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+.app__searched-card h4{
+    color: rgb(85, 85, 85);
+    font-size: 1.5rem;
+    text-align: center;
+}
